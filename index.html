@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynthCore AI - Advanced B2B AI Services Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>SynthCore AI</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#testimonials" class="nav-link">Success Stories</a>
+                <button class="btn-primary" onclick="openDashboard()">Client Dashboard</button>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Revolutionize Your Business with <span class="gradient-text">AI-Powered</span> Solutions</h1>
+                <p class="hero-description">90% automated B2B services powered by synthetic intelligence, strategic AI agents, and deep learning systems. Complete hands-off operation with real-time progress tracking.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>AI Operation</p>
+                    </div>
+                    <div class="stat">
+                        <h3>90%</h3>
+                        <p>Automation</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>AI Agents</p>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large" onclick="scrollToServices()">
+                        Explore Services <i class="fas fa-arrow-down"></i>
+                    </button>
+                    <button class="btn-secondary btn-large" onclick="openAIChat()">
+                        <i class="fas fa-robot"></i> AI Consultant
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="ai-network">
+                    <div class="node main-node">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="node agent-node" style="top: 20%; left: 20%;">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="node agent-node" style="top: 20%; right: 20%;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="node agent-node" style="bottom: 20%; left: 20%;">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="node agent-node" style="bottom: 20%; right: 20%;">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">AI-Powered B2B Services</h2>
+            <p class="section-subtitle">Complete business solutions run by our advanced AI ecosystem</p>
+            
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All Services</button>
+                <button class="filter-btn" data-category="marketing">Digital Marketing</button>
+                <button class="filter-btn" data-category="development">Web Development</button>
+                <button class="filter-btn" data-category="analytics">Data & Analytics</button>
+                <button class="filter-btn" data-category="strategy">AI Strategy</button>
+            </div>
+            
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="process">
+        <div class="container">
+            <h2 class="section-title">AI-Driven Service Delivery</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>1. Service Request</h3>
+                    <p>Submit your requirements through our AI consultant</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>2. AI Orchestration</h3>
+                    <p>Strategic intelligence creates optimal workflow</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>3. Agent Execution</h3>
+                    <p>Specialized AI agents handle each task</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>4. Real-time Updates</h3>
+                    <p>Continuous progress tracking and communication</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>5. Quality Delivery</h3>
+                    <p>Automated quality assurance and delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="payments">
+        <div class="container">
+            <h2 class="section-title">Secure Payments</h2>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <div class="payment-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Direct EFT</h3>
+                    <p>Secure bank transfers for South African clients</p>
+                    <div class="bank-details">
+                        <p><strong>Bank:</strong> FNB</p>
+                        <p><strong>Account Type:</strong> Business Cheque</p>
+                        <p><strong>Weekly Payouts:</strong> 50% to owner</p>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <div class="payment-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>PayFast</h3>
+                    <p>Instant secure payments with all major SA banks</p>
+                    <div class="supported-banks">
+                        <div class="bank-logo">FNB</div>
+                        <div class="bank-logo">Standard Bank</div>
+                        <div class="bank-logo">Absa</div>
+                        <div class="bank-logo">Nedbank</div>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <div class="payment-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Stripe (Coming Soon)</h3>
+                    <p>Global payments for international clients</p>
+                    <div class="coming-soon">
+                        <span>Launching Q2 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The AI system completely transformed our digital marketing. 90% automation with real-time updates exceeded all expectations."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <p>Marketing Director, TechGrowth SA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Our SEO rankings improved by 200% in 3 months. The AI agents worked 24/7 and provided constant progress updates."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>James Muller</h4>
+                            <p>CEO, E-Commerce Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The complete AI-run platform saved us 60% in operational costs. The strategic intelligence optimized everything automatically."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Singh</h4>
+                            <p>CTO, DataFirst Analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>SynthCore AI</span>
+                    </div>
+                    <p>Advanced B2B AI services platform with 90% automation and complete service lifecycle management.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Digital Marketing</a></li>
+                        <li><a href="#services">SEO Optimization</a></li>
+                        <li><a href="#services">Content Creation</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#" onclick="openAIChat()">AI Consultant</a></li>
+                        <li><a href="#" onclick="openDashboard()">Client Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> support@synthcore.ai</p>
+                        <p><i class="fas fa-phone"></i> +27 11 123 4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SynthCore AI. All rights reserved. | 90% AI-Run Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Widget -->
+    <div class="ai-chat-widget" id="aiChatWidget">
+        <div class="chat-header" onclick="toggleChat()">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                <span>AI Consultant</span>
+            </div>
+            <div class="chat-actions">
+                <span class="chat-status online"></span>
+                <i class="fas fa-chevron-down" id="chatToggleIcon"></i>
+            </div>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-message ai-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm your AI business consultant. I can help you choose the right services, provide pricing, and even start your project immediately. How can I assist you today?</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Ask about our services...">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Service Dashboard Modal -->
+    <div class="modal" id="dashboardModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Client Dashboard</h2>
+                <button class="modal-close" onclick="closeDashboard()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="dashboard-tabs">
+                    <button class="tab-active" onclick="switchTab('services')">My Services</button>
+                    <button onclick="switchTab('progress')">Progress Tracking</button>
+                    <button onclick="switchTab('payments')">Payments</button>
+                </div>
+                <div class="tab-content active" id="servicesTab">
+                    <!-- Services content loaded dynamically -->
+                </div>
+                <div class="tab-content" id="progressTab">
+                    <!-- Progress content loaded dynamically -->
+                </div>
+                <div class="tab-content" id="paymentsTab">
+                    <!-- Payments content loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Access Your Account</h2>
+                <button class="modal-close" onclick="closeLoginModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-full">Sign In</button>
+                </form>
+                <div class="auth-switch">
+                    <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/service-catalog.js"></script>
+    <script src="js/payment-handler.js"></script>
+    <script src="js/ai-chat.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
